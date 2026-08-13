@@ -18,6 +18,10 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/task_management
+      SPRING_DATASOURCE_USERNAME: task_user
+      SPRING_DATASOURCE_PASSWORD: task_password
     services:
       postgres:
         image: postgres:16
