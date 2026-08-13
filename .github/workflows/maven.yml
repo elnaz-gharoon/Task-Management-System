@@ -18,11 +18,24 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+  services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: task_management
+          POSTGRES_USER: task_user
+          POSTGRES_PASSWORD: task_password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd="pg_isready -U task_user -d task_management"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
     - name: Set up JDK 21
-      uses: actions/setup-java@v4
+      uses: actions/setup-java@v5
       with:
         java-version: '21'
         distribution: 'temurin'
