@@ -1,8 +1,8 @@
-package com.example.task_management_system.enitity;
+package com.example.task_management_system.entity;
 
 
-import com.example.task_management_system.enitity.enums.TaskPriority;
-import com.example.task_management_system.enitity.enums.TaskStatus;
+import com.example.task_management_system.entity.enums.TaskPriority;
+import com.example.task_management_system.entity.enums.TaskStatus;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;

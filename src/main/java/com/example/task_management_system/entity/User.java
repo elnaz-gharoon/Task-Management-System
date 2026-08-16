@@ -1,4 +1,4 @@
-package com.example.task_management_system.enitity;
+package com.example.task_management_system.entity;
 
 import jakarta.persistence.*;
 
