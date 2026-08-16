@@ -1,4 +1,4 @@
-package com.example.task_management_system.enitity.enums;
+package com.example.task_management_system.entity.enums;
 
 public enum TaskPriority {
     LOW,

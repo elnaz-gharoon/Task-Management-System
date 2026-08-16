@@ -1,7 +1,6 @@
-package com.example.task_management_system.enitity;
+package com.example.task_management_system.entity;
 
 import jakarta.persistence.*;
-import org.hibernate.sql.ast.tree.expression.JsonTableColumnDefinition;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
