@@ -1,0 +1,8 @@
+POST http://localhost:8080/api/users
+Content-Type: application/jso
+{
+  "firstName": "Elnaz",
+  "lastName": "Gharoon",
+  "email": "elnaz@example.com",
+  "password": "test123"
+}
