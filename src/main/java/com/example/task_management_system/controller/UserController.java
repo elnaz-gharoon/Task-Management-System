@@ -22,8 +22,9 @@ private final UserService userService;
     public List<User> getAllUser(){
         return userService.getAllUser();
     }
+
     @GetMapping("/{id}")
-    public Optional<User> getUserById(@PathVariable Long id){
+    public User getUserById(@PathVariable Long id){
         return userService.getUserById(id);
     }
     //Nimm das JSON aus dem HTTP-Request und verwandle es in ein CreateUserRequest-Objekt.

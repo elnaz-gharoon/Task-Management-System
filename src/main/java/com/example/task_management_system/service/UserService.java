@@ -2,6 +2,7 @@ package com.example.task_management_system.service;
 
 import com.example.task_management_system.dto.CreateUserRequest;
 import com.example.task_management_system.entity.User;
+import com.example.task_management_system.exception.UserNotFoundException;
 import com.example.task_management_system.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -26,8 +27,10 @@ public class UserService {
         return userRepository.save(user1);
     }
 
-    public Optional<User> getUserById(Long id) {
-        return userRepository.findById(id);
+    public User getUserById(Long id) {
+        return userRepository.findById(id)
+                .orElseThrow(() ->
+                        new UserNotFoundException("User with id " + id + " not found"));
     }
 
 
